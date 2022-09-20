@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>ex5</title>    
+  </head>
+  <body>
+    <script>
+vall=window.prompt("ins");
+      function vowelsCount(str){
+    let count = 0;
+    let vowels = ["a","e","i","o","u"];
+
+    for(let letter of str.toLowerCase()){
+        for(let v of vowels){
+            if(letter===v){
+                count++;
+            }
+        }
+    }
+    return count;
+}
+const string = vall ;
+console.log(vowelsCount(string)); 
+
+    </script>
+  </body>
+</html>
