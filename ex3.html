@@ -10,18 +10,22 @@
 <body>
     
     <script>
-      var y=window.prompt("first");
-      var b=window.prompt("seconde");
-      x = Number(y) + Number(b); 
-      w= Number(x) / 2 ;
-      if ( x>0  ){
-         console.log(x);  
+      var y =window.prompt("first" );
+      if (y<=0) {
+        window.alert("Remarquez la mauvaise entrée");
+        close
+      }
+      else
+      {
+      var b =window.prompt("seconde");
+        x = Number(y) + Number(b); 
+        w = Number(x) / 2 ;
+      console.log(x);  
       console.log(w);
       document.writeln(x);
       document.writeln("/< la moyenne  est :>/");
-     document.writeln(w);
-      }else (x=0) 
-    close
+      document.writeln(w);
+      }
     
    </script>
 </body>

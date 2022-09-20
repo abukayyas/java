@@ -9,19 +9,13 @@
 <body>
     <script>
         var voll=window.prompt("ins");
-        var lett=voll.substring(0);
-        coun=lett.length ;
-        console.log(coun);
+       const vol = ['a','e','u','i','o'];
+        var lett=voll.substring(vol);
+        console.log(voll.indexOf('a','e','u','i','o'));
+        coun=vol.length;
         console.log(lett);
        
-var date = window.prompt("ttt");
-var jour = date.substring(0,2);
-var mois = date.substring(3,5);
-var annee = date.substring(6,10);
-
-document.write(jour+"<br>");
-document.write(mois+"<br>");
-document.write(annee+"<br>");
+       
 
     </script>
 </body>
