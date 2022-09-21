@@ -5,27 +5,24 @@
     <title>Exercice</title>    
   </head>
   <body>
-    <h1>Portée d'une variable dans une fonction | Javascript</h1>
-    <hr>        
     <script>
-    function maFonction() 
-    {
-     var plop1 = 123;       
-       return plop1;
+  function all(str){
+    let count = 0;
+    let voyelle = ["a","e","i","o","u"];
+
+    for(let letter of str.toLowerCase()){
+        for(let v of voyelle){
+            if(letter===v){
+                count++;
+            }
+        }
     }
-
-    function maFonction2() 
-    {
-       plop2 = 456;     
-    }
-
-    plop1 = maFonction();
-
-    console.log("fonction 1 / plop1 : "+plop1);
-
-    maFonction2();
-
-    console.log("mafonction2 > plop2 : "+plop2);
-    </script> 
+    return count;
+}
+const string = window.prompt("insert");
+console.log(all(string));
+    </script>   
+    
+    
   </body>
 </html>
