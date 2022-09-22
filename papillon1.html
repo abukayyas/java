@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>papillon</title>
+</head>
+<body>
+    <p id="img1">image</p>
+    <p id="txt1">texte 1</p>
+    <p id="txt2">texte 2</p>
+    <script>
+       var x = window.prompt("Entrez un nombre");
+var y = window.prompt("Entrez un multiplicateur");
+console.log(x);
+console.log(y);
+
+produit(x,y);
+cube(x);
+afficheImg();
+
+
+function produit(x,y)
+{ 
+  var p = x*y;
+  document.getElementById("txt1").innerHTML="le produit de "+ x + " x " +y+ " = " +p;
+  //document.write("Le produit de "+x+"x"+y+" est egal à "+resultat+"<br>"+"Le cube de "+x+" est égal à "+cube);
+  console.log(p);
+  return p;
+}
+
+function cube(x) {
+    var c = x*x*x;
+    document.getElementById("txt2").innerHTML="le cube de " +x+ " est égal à" +c ;
+}
+
+function afficheImg() 
+{
+    var img = document.getElementById("img1");
+    img.innerHTML= `<img src="papillon.jpg">`;
+    
+} 
+    </script>
+</body>
+</html>
