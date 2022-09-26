@@ -1,20 +1,56 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <title>Intercepte la validation du formulaire</title>
 </head>
 <body>
-    <script> 
-    function carre(nombre) 
-{
-    
-  var resultat = nombre*nombre;
-  return resultat; 
-  console.log(resultat);
+  <p>Vos coordonnées :</p>
+  <p style = "color: red" >  * Ces zones sont obligatoires poure envoyer le formulaire</p>
+  
+  <form id="form1" name="form1" onSubmit="return checkForm(this);">
+      <p> Société :       <input type="text" name= "nom" id="nom" value="" />  * </p>
+      <p> personne à contacter : <input type="text" name= "prenom" value="" /> * </p>
+      <p>Adresse de i'entreprise :   <input type="text" name="adresse" value="" />  </p>
+      <p> Code postal :<input type="text" minlength="1" maxlength="5" name="code" value="" /> *</p>
+      <p>Ville : <input type="text" name="vill" value="" /> *</p>
+      <p>E-mail : <input type="email" name="email" value="" />*</p>
+      <p>Téléphone :<input type="tel" name="telephone" value="" /> </p>
+      <p>sélectionnez<input type="text" name="select" value="" /> </p>
+      <p>l'environnement</p>
+      <p>technique du <fieldset> </p>
+        <select name="select" id="select">
+          <option value="choisissez">choisissez</option>
+          <option value="access">Access</option>
+          <option value="Java">Java</option>
+          <option value="Delphi">Delphi</option>
+          <option value="Windev">Windev</option>
+          <option value="Visul Basic">Visul Basic</option>
+          <option value="Power Bulider">Power Bulider</option>
+          <option value="Intranet">Intranet</option>
+          <option value="Internet">Internet</option>
+          <option value="Windows NT">Windows NT</option>
+          <option value="Unix"> Unix</option>
+          <option value="SQL Server">SQL Server</option>
+          <option value="Oracle">Oracle</option>
+          <option value="Autres">Autres</option>
+
+        </select>
+     </p>
+     <input type="submit" id="idSubForm1" name="subForm1" value="Envoyer" />
+     <input type="reset" id="idresetform1" name="resetform1" value="Effacer">
+</form>
+<script>
+function checkForm(str){
+  if(document.getElementById(nom.value)="" ) { 
+alert=("entrez le nom de la personne à contacter S.V.P");
+  }else{
+  alert("votre informtion :"  + str.elements['nom'].value +" "+ str.elements['prenom'].value +" " + str.elements['adresse'].value + str.elements
+  ['code'].value + " " + str.elements['vill'].value  + " " + str.elements['email'].value + " " + str.elements['telephone'].value + " " + str.elements
+  ['select'].value);
+ 
+  return false;
 }
-        </script>
+}
+</script>
 </body>
 </html>
