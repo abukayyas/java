@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tableau1</title>
+    <title>tableau</title>
 </head>
 <body>
   
     <script >
-        document.writeln("<table border='5'>");
+        document.writeln("<table border='1'>");
         var j=window.prompt("insert your number") ;
-        //document.writeln("TableMultiplication (" + j+ ")");
-        for(var i=0;i<=j;i++){
-            document.writeln("<tr>");
+        document.writeln("Table information (" + j+ ")");
+        for(var i=1;i<=j;i++){
+           var x=window.prompt("insert information");
+            
+            document.writeln("<tr> ");
          
-               document.writeln("<td>" ,"</td>");
+               document.writeln("<td>" +x ,"</td>");
             
             document.writeln('</tr>');
         }
