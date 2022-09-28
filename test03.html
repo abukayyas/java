@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice3</title>
+</head>
+<body>
+    <script>
+
+
+prenom();
+
+function prenom() {
+var tab = ["Audrey" , "Aurélien" , "Flavien" , "Jérémy" , "Laurent" , "Melik" , "Nouara" , "Salem" , "Samuel" , "Stéphane"];
+var personne = window.prompt("please insert your name " + tab).toLowerCase();
+console.log(personne);
+    if (personne==null) {
+        return;
+    }
+
+    var prenom = personne.charAt(0).toUpperCase() + personne.slice(1);
+    console.log(prenom);
+
+    for(i=0; i<tab.length ; i++) {
+        if (prenom == tab[i]){
+        tab.splice(i,1);
+        tab.push("");
+        console.log(tab);
+        alert(tab);
+        return true;
+        }
+    console.log(i);
+    }
+    alert ("wrong name");
+    return false;
+}
+
+    </script>
+</body>
+</html>

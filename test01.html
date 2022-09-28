@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>exercice1</title>
+
+</head>
+
+<body>
+    <script>
+ 
+var j=0;
+var a=0;
+var v=0;
+var old;
+do {
+  old = window.prompt("Entrez votre age");
+  if ( old <=19) {
+    j++;
+
+  }
+  else if ((old >=50 ) && (old <=100)) {
+    v++;
+ 
+  }
+  else if (old => 20){
+    a++;
+    
+  }
+}
+while (old < 100);
+window.alert("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" +" vieux\n " + " dont "+ " 1 " + "" + " centenaire ");
+window.alert("Le premier centenaire en un an : " + ( 2022 - old + 100) );
+    </script>
+
+</body>
+
+</html>
